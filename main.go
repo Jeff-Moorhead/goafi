@@ -53,6 +53,6 @@ func main() {
 
     quotespath := os.Getenv("GOAFI")
     cacheQuotes(quotespath)
-    http.Handle("/randomquote", &quotes)
+    http.Handle("/", &quotes)
     http.ListenAndServe(":8000", nil)
 }
