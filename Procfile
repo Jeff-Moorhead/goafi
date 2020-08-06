@@ -1,1 +1,1 @@
-web: ~/bin/goquotes
+web: bin/goquotes
