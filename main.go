@@ -49,10 +49,11 @@ func (qh *quoteHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 
 func main() {
+    port := os.Getenv("PORT")
     rand.Seed(time.Now().UnixNano())
 
     quotespath := os.Getenv("GOAFI")
     cacheQuotes(quotespath)
     http.Handle("/", &quotes)
-    http.ListenAndServe(":8000", nil)
+    http.ListenAndServe(":" + port, nil)
 }
