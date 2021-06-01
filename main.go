@@ -1,5 +1,7 @@
 package main
 
+// Main entry point for goafi server
+
 import (
     "fmt"
     "net/http"
